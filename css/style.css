@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    font-family: cursive;
+    font-weight: 100;
+}
+
+html {
+    overflow: hidden;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+
+    background-color: #dedede;
+}
+
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.background.hide {
+    display: none;
+}
+
+.modal {
+    background-color: #eee;
+    border-radius: .4rem;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.modal .ball {
+    width: 40px;
+    height: 40px;
+    background-color: #b42727;
+    border: 1px solid #333;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.btn-start {
+    background-color: #111;
+    color: #eee;
+    font-size: 2rem;
+    padding: 1rem 8rem;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: .4rem;
+}
+
+.btn-start:active {
+    background-color: #333;
+}
+
+
+
+/* Game */
+
+
+.game {
+    max-width: 400px;
+    width: 320px;
+    height: 150px;
+    margin-top: 15rem;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 0;
+}
+
+.place {
+    transition: .4s;
+    width: 100px;
+    position: relative;
+    position: absolute;
+    height: 135px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    transition: 2s;
+    z-index: 1;
+    background-image: url("../images/trash.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+}
+
+.game .ball {
+    width: 40px;
+    height: 40px;
+    background-color: #b42727;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    z-index: -1;
+}
+
+/* Classes */
+
+.place.left {
+    left: 0;
+}
+
+.place.right {
+    left: 220px;
+}
+
+.place.center {
+    left: 110px;
+}
+
+
+.wrapper.show {
+    transform: translateY(-150px);
+    transition: 1s;
+}
